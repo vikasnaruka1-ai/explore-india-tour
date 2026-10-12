@@ -3,95 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Explore India | Luxury Multi-Day Tours, Cab Rentals & AI Travel Assistant</title>
-  
-  <!-- Google Fonts -->
+  <title>Explore India | Luxury Tour Packages, Cab Rentals & AI Travel Assistant</title>
+  <meta name="description" content="Explore India offers luxury Rajasthan tour packages, Golden Triangle tours, cab rentals, safaris, hotel bookings, and personalized travel planning for global travelers.">
+  <meta name="keywords" content="Explore India, Rajasthan tour package, Jaipur tour, Delhi Agra Jaipur package, cab rental Jaipur, India travel packages, luxury travel India, AI travel assistant">
+  <meta name="theme-color" content="#f59e0b">
+  <meta property="og:title" content="Explore India | Luxury Multi-Day Tours, Cab Rentals & AI Travel Assistant">
+  <meta property="og:description" content="Custom Rajasthan tour packages, verified cabs, heritage stays, and expert travel support for international guests.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:url" content="https://vikasnaruka1-ai.github.io/explore-india-tour/">
+  <link rel="canonical" href="https://vikasnaruka1-ai.github.io/explore-india-tour/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
   <style>
     :root {
       --primary: #2563eb;
       --gold: #f59e0b;
+      --gold-soft: #fbbf24;
       --gold-gradient: linear-gradient(135deg, #f59e0b, #fbbf24, #d97706);
       --bg-dark: #030712;
-      --card-bg: rgba(15, 23, 42, 0.85);
+      --bg-2: #0b1220;
+      --card-bg: rgba(15, 23, 42, 0.88);
+      --card-soft: rgba(15,23,42,0.72);
       --border-glow: rgba(245, 158, 11, 0.25);
       --text-light: #f8fafc;
       --text-muted: #94a3b8;
+      --success: #22c55e;
+      --shadow: 0 20px 45px rgba(0,0,0,0.35);
+      --radius: 18px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
 
     body {
-      background-color: var(--bg-dark);
+      margin: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg-dark);
       color: var(--text-light);
-      min-height: 100vh;
+      line-height: 1.6;
       overflow-x: hidden;
-      position: relative;
+    }
+
+    a { text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button, input, select { font: inherit; }
+
+    .container {
+      width: min(1200px, calc(100% - 32px));
+      margin: 0 auto;
     }
 
     .top-bar {
       background: linear-gradient(90deg, #d97706, #f59e0b);
       color: #030712;
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 800;
       text-align: center;
-      padding: 8px 15px;
+      padding: 10px 16px;
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 20px;
       flex-wrap: wrap;
+      letter-spacing: 0.02em;
     }
 
     header {
       position: sticky;
       top: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 6%;
-      background: rgba(3, 7, 18, 0.92);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       z-index: 1000;
+      backdrop-filter: blur(16px);
+      background: rgba(3, 7, 18, 0.85);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 78px;
+      gap: 20px;
     }
 
     .brand-logo {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 12px;
-      text-decoration: none;
+      color: var(--text-light);
     }
 
     .logo-icon {
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
       background: var(--gold-gradient);
-      border-radius: 10px;
+      color: #111827;
       display: grid;
       place-items: center;
-      color: #030712;
       font-size: 18px;
-      box-shadow: 0 8px 20px rgba(245, 158, 11, 0.35);
+      box-shadow: 0 10px 22px rgba(245, 158, 11, 0.32);
     }
 
     .brand-name {
       font-family: 'Cinzel', serif;
-      font-size: 20px;
-      font-weight: 900;
-      letter-spacing: 1.5px;
+      font-size: clamp(1.1rem, 1.7vw, 1.6rem);
+      font-weight: 800;
+      letter-spacing: 0.12em;
       background: linear-gradient(90deg, #ffffff, #fcd34d);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -99,137 +120,182 @@
 
     .nav-links {
       display: flex;
-      gap: 22px;
       align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
     }
 
     .nav-links a {
       color: var(--text-light);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 13px;
       text-transform: uppercase;
-      transition: color 0.3s;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      opacity: 0.9;
+      transition: color 0.2s ease;
     }
 
-    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover { color: var(--gold-soft); }
 
-    .header-right {
+    .header-actions {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 12px;
     }
 
     .lang-box {
       display: flex;
       align-items: center;
       gap: 8px;
-      background: rgba(255, 255, 255, 0.06);
-      padding: 5px 12px;
-      border-radius: 30px;
-      border: 1px solid var(--border-glow);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: var(--text-light);
     }
-    #google_translate_element { display: inline-block; }
-    .goog-te-gadget-simple { background: transparent !important; border: none !important; font-size: 12px !important; }
-    .goog-te-gadget-simple span { color: var(--text-light) !important; }
 
     .hero {
       position: relative;
-      background: linear-gradient(rgba(3, 7, 18, 0.65), rgba(3, 7, 18, 0.88)), url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-      text-align: center;
-      padding: 95px 20px 65px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background:
+        linear-gradient(rgba(3,7,18,0.72), rgba(3,7,18,0.9)),
+        url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
+      padding: 100px 0 72px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
-    .hero-badge {
-      display: inline-block;
-      padding: 6px 18px;
-      border-radius: 50px;
-      background: rgba(245, 158, 11, 0.2);
+    .hero-inner {
+      display: grid;
+      gap: 34px;
+      justify-items: center;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: rgba(245, 158, 11, 0.12);
       border: 1px solid var(--border-glow);
       color: #fbbf24;
-      font-size: 12px;
       font-weight: 700;
-      letter-spacing: 1.2px;
-      margin-bottom: 15px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 11px;
     }
 
-    .hero h1 {
+    h1 {
       font-family: 'Cinzel', serif;
-      font-size: clamp(30px, 5vw, 56px);
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      max-width: 950px;
       font-weight: 900;
-      line-height: 1.2;
-      margin-bottom: 15px;
-      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+      text-shadow: 0 18px 40px rgba(0,0,0,0.6);
     }
 
-    .hero h1 span {
+    .gold-text {
       background: var(--gold-gradient);
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
     }
 
     .hero p {
-      font-size: 16px;
+      max-width: 760px;
       color: var(--text-muted);
-      line-height: 1.6;
-      margin-bottom: 30px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      font-size: 1.05rem;
+      line-height: 1.7;
     }
 
-    .booking-widget {
+    .cta-row {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 22px;
+      border-radius: 14px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: var(--gold-gradient);
+      color: #111827;
+      box-shadow: 0 12px 30px rgba(245, 158, 11, 0.4);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.04);
+      color: var(--text-light);
+      border-color: rgba(255,255,255,0.1);
+    }
+
+    .widget {
+      width: min(100%, 950px);
       background: rgba(15, 23, 42, 0.92);
-      backdrop-filter: blur(16px);
       border: 1px solid var(--border-glow);
-      border-radius: 20px;
-      padding: 25px;
-      max-width: 900px;
-      margin: 0 auto;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.7);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
     }
 
     .widget-tabs {
       display: flex;
-      gap: 15px;
-      margin-bottom: 20px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 22px;
       padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .w-tab {
-      background: transparent;
       border: none;
+      background: transparent;
       color: var(--text-muted);
-      font-weight: 600;
-      font-size: 14px;
-      cursor: pointer;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-weight: 700;
       display: flex;
       align-items: center;
       gap: 8px;
-      padding: 8px 16px;
-      border-radius: 8px;
-      transition: 0.3s;
+      cursor: pointer;
+      transition: 0.2s ease;
     }
 
     .w-tab.active, .w-tab:hover {
-      background: rgba(245, 158, 11, 0.15);
-      color: var(--gold);
+      background: rgba(245, 158, 11, 0.12);
+      color: var(--gold-soft);
     }
 
     .widget-form {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) 140px;
-      gap: 15px;
-      align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) 150px;
+      gap: 14px;
+      align-items: end;
     }
 
     .input-group {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
       border-radius: 12px;
-      padding: 12px 16px;
+      padding: 12px 14px;
       text-align: left;
     }
 
@@ -238,276 +304,296 @@
       font-size: 11px;
       color: var(--text-muted);
       text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 7px;
       font-weight: 700;
-      margin-bottom: 4px;
     }
 
     .input-group input, .input-group select {
       width: 100%;
       background: transparent;
       border: none;
-      outline: none;
       color: #fff;
-      font-size: 14px;
-      font-weight: 600;
+      font-size: 0.96rem;
+      outline: none;
     }
 
     .input-group select option { background: #0f172a; color: #fff; }
 
     .search-btn {
-      background: var(--gold-gradient);
-      color: #030712;
       border: none;
+      background: var(--gold-gradient);
+      color: #111827;
       border-radius: 12px;
-      padding: 16px;
+      min-height: 55px;
       font-weight: 800;
-      font-size: 15px;
       cursor: pointer;
-      transition: transform 0.2s;
-      height: 100%;
+      box-shadow: 0 12px 26px rgba(245,158,11,0.28);
     }
 
-    .search-btn:hover { transform: scale(1.03); }
+    .stats-strip {
+      background: rgba(11, 18, 32, 0.9);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
 
-    .offers-container {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
+    .stats-row {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 22px;
+      padding: 30px 0;
+    }
+
+    .stat-box {
+      text-align: center;
+      padding: 12px;
+    }
+
+    .stat-value {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      color: var(--gold-soft);
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    main section {
+      padding: 80px 0;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 18px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .section-head h2 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2rem, 4vw, 2.9rem);
+      line-height: 1.2;
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+
+    .section-head p {
+      color: var(--text-muted);
+      max-width: 580px;
+      font-size: 0.98rem;
+    }
+
+    .offer-grid,
+    .tour-grid,
+    .dest-grid,
+    .adv-grid,
+    .testimonials-grid,
+    .feature-grid {
+      display: grid;
+      gap: 26px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .offer-card,
+    .tour-card,
+    .testimonial,
+    .feature-card,
+    .summary-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
     }
 
     .offer-card {
-      background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(217, 119, 6, 0.25));
-      border: 1px solid var(--gold);
-      border-radius: 16px;
-      padding: 25px;
+      padding: 24px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      box-shadow: 0 10px 30px rgba(245, 158, 11, 0.12);
-      text-align: left;
+      gap: 16px;
+      min-height: 220px;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(15,23,42,0.92));
+      border-color: rgba(245,158,11,0.35);
+    }
+
+    .offer-card i {
+      color: var(--gold-soft);
+      font-size: 1.5rem;
     }
 
     .offer-card h3 {
       font-family: 'Cinzel', serif;
+      font-size: 1.25rem;
       color: #fbbf24;
-      font-size: 18px;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
     }
 
-    .offer-card p {
-      color: var(--text-light);
-      font-size: 13.5px;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
+    .offer-card p { color: var(--text-muted); }
 
     .offer-btn {
-      background: var(--gold-gradient);
-      color: #030712;
-      padding: 10px 20px;
-      border-radius: 30px;
-      font-weight: 700;
-      font-size: 13px;
-      text-decoration: none;
-      text-align: center;
-      transition: transform 0.2s;
       align-self: flex-start;
+      background: var(--gold-gradient);
+      color: #111827;
+      font-weight: 800;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 0.82rem;
     }
 
-    .offer-btn:hover { transform: scale(1.05); }
-
-    .trust-strip {
-      display: flex;
-      justify-content: center;
-      gap: 35px;
-      flex-wrap: wrap;
-      margin: 40px auto;
-      max-width: 1100px;
-      padding: 0 20px;
-    }
-
-    .trust-badge-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      padding: 12px 22px;
-      border-radius: 14px;
-      font-size: 13.5px;
-      font-weight: 600;
-      color: var(--text-light);
-    }
-
-    .trust-badge-item i { color: var(--gold); font-size: 18px; }
-
-    .section-wrap {
-      max-width: 1300px;
-      margin: 0 auto 80px;
-      padding: 0 24px;
-    }
-
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 35px;
-    }
-
-    .section-header h2 {
-      font-family: 'Cinzel', serif;
-      font-size: clamp(24px, 3.5vw, 34px);
-      letter-spacing: 0.5px;
-      margin-bottom: 5px;
-    }
-
-    .section-header p { color: var(--text-muted); font-size: 14px; }
-
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-    }
-
-    .tilt-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-glow);
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-      transition: transform 0.2s ease, border-color 0.3s;
+    .tour-card {
       display: flex;
       flex-direction: column;
+      transition: transform 0.2s ease;
     }
 
-    .tilt-card:hover {
-      border-color: #fbbf24;
-      transform: translateY(-5px);
-    }
+    .tour-card:hover { transform: translateY(-5px); }
 
     .card-media {
       position: relative;
       height: 220px;
       overflow: hidden;
-      background: #0b0f19;
     }
 
     .card-media img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s ease;
+      transition: transform 0.45s ease;
     }
 
-    .tilt-card:hover .card-media img { transform: scale(1.06); }
+    .tour-card:hover .card-media img { transform: scale(1.05); }
 
-    .rating-badge {
+    .rating-badge,
+    .badge-pill {
       position: absolute;
-      top: 14px;
-      left: 14px;
-      background: rgba(3, 7, 18, 0.85);
-      backdrop-filter: blur(6px);
-      padding: 5px 10px;
-      border-radius: 8px;
-      font-size: 12px;
-      font-weight: 700;
-      color: #fbbf24;
-      display: flex;
+      z-index: 2;
+      display: inline-flex;
       align-items: center;
-      gap: 4px;
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .badge-float {
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      background: rgba(3, 7, 18, 0.85);
-      backdrop-filter: blur(6px);
-      padding: 5px 12px;
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      gap: 6px;
       font-size: 11px;
-      color: #fff;
-      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(3, 7, 18, 0.7);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      font-weight: 700;
+      color: var(--gold-soft);
     }
 
-    .card-content {
-      padding: 22px;
-      flex: 1;
+    .rating-badge { top: 12px; left: 12px; }
+    .badge-pill {
+      right: 12px; top: 12px;
+      color: #111827;
+      background: var(--gold-gradient);
+      border: none;
+    }
+
+    .card-body {
+      padding: 22px 20px 18px;
       display: flex;
       flex-direction: column;
+      flex: 1;
     }
 
-    .card-content h3 {
+    .card-body h3 {
       font-family: 'Cinzel', serif;
-      font-size: 19px;
+      font-size: 1.22rem;
       margin-bottom: 8px;
       color: #fff;
     }
 
-    .card-content p {
-      font-size: 13.5px;
+    .card-body p {
       color: var(--text-muted);
-      line-height: 1.5;
+      font-size: 0.94rem;
       margin-bottom: 14px;
     }
 
-    .package-features {
+    .feature-list {
       list-style: none;
-      margin-bottom: 18px;
+      display: grid;
+      gap: 8px;
       margin-top: auto;
+      margin-bottom: 18px;
     }
 
-    .package-features li {
+    .feature-list li {
+      color: #e5edf8;
       font-size: 12.5px;
-      color: #e2e8f0;
-      margin-bottom: 6px;
       display: flex;
-      align-items: center;
+      align-items: start;
       gap: 8px;
     }
 
-    .package-features li i {
-      color: var(--gold);
-      font-size: 13px;
-    }
+    .feature-list li i { color: var(--gold-soft); margin-top: 2px; }
 
     .card-footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 14px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding-top: 14px;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      color: var(--gold-soft);
+      font-weight: 800;
+      font-size: 0.8rem;
     }
 
     .action-link {
-      color: #fbbf24;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 13px;
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 6px;
-      transition: gap 0.2s ease;
+      gap: 8px;
+      color: var(--gold-soft);
+      font-weight: 700;
+      font-size: 0.82rem;
     }
 
-    .action-link:hover { gap: 9px; }
+    .feature-card {
+      padding: 25px 22px;
+      background: linear-gradient(180deg, rgba(15,23,42,0.9), rgba(9,15,28,0.75));
+    }
 
-    .table-container {
-      width: 100%;
-      overflow-x: auto;
-      background: var(--card-bg);
-      border: 1px solid var(--border-glow);
-      border-radius: 16px;
+    .feature-card i {
+      width: 46px;
+      height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: rgba(245,158,11,0.12);
+      color: var(--gold-soft);
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.08rem;
+      margin-bottom: 8px;
+      color: var(--text-light);
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 0.93rem;
+    }
+
+    .pricing-wrap {
       margin-top: 20px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+      background: var(--card-soft);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
     }
 
     .pricing-table {
@@ -517,234 +603,248 @@
     }
 
     .pricing-table th, .pricing-table td {
-      padding: 15px 20px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      font-size: 0.92rem;
+      padding: 16px 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      vertical-align: top;
+      font-size: 0.94rem;
     }
 
     .pricing-table th {
-      background: rgba(3, 7, 18, 0.95);
-      color: var(--gold);
+      background: rgba(3,7,18,0.96);
+      color: var(--gold-soft);
       font-family: 'Cinzel', serif;
-      font-size: 1rem;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
-      letter-spacing: 1px;
     }
 
-    .pricing-table tr:hover { background: rgba(245, 158, 11, 0.03); }
     .pricing-table tr:last-child td { border-bottom: none; }
 
-    .table-note {
-      margin-top: 15px;
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      background: rgba(245, 158, 11, 0.06);
-      border-left: 4px solid var(--gold);
-      padding: 12px 18px;
-      border-radius: 6px;
-    }
+    .pricing-table td strong { color: var(--gold-soft); }
 
     .faq-container {
-      max-width: 900px;
+      display: grid;
+      gap: 16px;
+      max-width: 960px;
       margin: 0 auto;
     }
 
     .faq-item {
       background: var(--card-bg);
       border: 1px solid var(--border-glow);
-      border-radius: 12px;
-      margin-bottom: 15px;
-      padding: 20px;
+      border-radius: 14px;
+      padding: 22px 20px;
     }
 
     .faq-item h4 {
       font-family: 'Cinzel', serif;
-      color: #fbbf24;
-      font-size: 16px;
+      color: var(--gold-soft);
+      font-size: 1.08rem;
       margin-bottom: 8px;
     }
 
     .faq-item p {
       color: var(--text-muted);
-      font-size: 13.5px;
-      line-height: 1.6;
+      font-size: 0.94rem;
     }
 
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-      margin-top: 25px;
+    .testimonial {
+      padding: 22px;
     }
 
-    .testimonial-card {
-      background: var(--card-bg);
+    .stars {
+      color: var(--gold-soft);
+      margin-bottom: 12px;
+      letter-spacing: 0.08em;
+    }
+
+    .testimonial p {
+      color: var(--text-muted);
+      font-style: italic;
+      margin-bottom: 14px;
+      font-size: 0.94rem;
+    }
+
+    .testimonial-author {
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .cta-banner {
+      background: linear-gradient(135deg, rgba(245,158,11,0.12), rgba(37,99,235,0.14));
       border: 1px solid var(--border-glow);
-      padding: 24px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      border-radius: 20px;
+      padding: 30px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      box-shadow: var(--shadow);
     }
 
-    .testimonial-card .stars { color: #fbbf24; font-size: 13px; margin-bottom: 10px; }
-    .testimonial-card p { font-style: italic; color: var(--text-muted); font-size: 13.5px; line-height: 1.6; margin-bottom: 14px; }
-    .testimonial-author { font-weight: 700; color: #fff; font-size: 13px; font-family: 'Cinzel', serif; }
+    .cta-banner h3 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+    }
+
+    .cta-banner p {
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      background: rgba(3,7,18,0.98);
+      padding: 28px 0 40px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
 
     .floating-buttons {
       position: fixed;
-      bottom: 25px;
-      right: 25px;
+      right: 24px;
+      bottom: 24px;
       display: flex;
       flex-direction: column;
-      gap: 15px;
-      z-index: 9999;
       align-items: flex-end;
+      gap: 14px;
+      z-index: 1200;
+    }
+
+    .float-wa,
+    .ai-chat-btn {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 24px;
+      box-shadow: 0 12px 26px rgba(0,0,0,0.26);
     }
 
     .float-wa {
-      width: 60px;
-      height: 60px;
-      background-color: #25d366;
-      color: #fff;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 32px;
-      text-decoration: none;
-      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-      transition: transform 0.3s;
+      background: #25d366;
+      color: white;
     }
-    .float-wa:hover { transform: scale(1.1) rotate(-10deg); }
 
     .ai-chat-btn {
-      width: 60px;
-      height: 60px;
       background: var(--gold-gradient);
-      color: #030712;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 26px;
+      color: #111827;
       cursor: pointer;
-      box-shadow: 0 5px 20px rgba(245, 158, 11, 0.5);
       border: 2px solid #fff;
-      transition: transform 0.3s;
     }
-    .ai-chat-btn:hover { transform: scale(1.1); }
 
     .ai-chat-box {
-      display: none;
       position: fixed;
-      bottom: 100px;
-      right: 25px;
-      width: 350px;
-      max-height: 480px;
+      right: 24px;
+      bottom: 108px;
+      width: min(350px, calc(100vw - 24px));
       background: #0f172a;
       border: 1px solid var(--border-glow);
-      border-radius: 16px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.8);
-      z-index: 10000;
-      flex-direction: column;
+      border-radius: 18px;
       overflow: hidden;
+      display: none;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.7);
+      z-index: 1300;
     }
 
     .ai-chat-header {
       background: var(--gold-gradient);
-      color: #030712;
-      padding: 15px;
-      font-weight: 800;
+      color: #111827;
+      padding: 14px 16px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      font-size: 15px;
+      justify-content: space-between;
+      font-weight: 800;
     }
 
-    .ai-chat-header i { cursor: pointer; font-size: 18px; }
-
     .ai-chat-body {
-      padding: 15px;
+      max-height: 300px;
       overflow-y: auto;
-      flex: 1;
-      font-size: 13.5px;
+      padding: 14px;
       display: flex;
       flex-direction: column;
       gap: 12px;
-      max-height: 300px;
+      background: rgba(15,23,42,0.95);
     }
 
     .ai-msg {
-      background: rgba(255, 255, 255, 0.08);
-      padding: 10px 14px;
-      border-radius: 10px;
-      color: #f8fafc;
-      line-height: 1.4;
       max-width: 85%;
+      padding: 10px 12px;
+      border-radius: 12px;
+      line-height: 1.5;
+      font-size: 0.86rem;
     }
 
-    .ai-msg.bot { align-self: flex-start; border-left: 3px solid var(--gold); }
-    .ai-msg.user { align-self: flex-end; background: #2563eb; color: #fff; }
-
-    .ai-chat-footer {
-      padding: 12px;
-      background: rgba(3, 7, 18, 0.95);
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      display: flex;
-      gap: 8px;
+    .ai-msg.bot {
+      align-self: flex-start;
+      background: rgba(255,255,255,0.06);
+      border-left: 3px solid var(--gold-soft);
+      color: var(--text-light);
     }
 
-    .ai-chat-footer input {
-      flex: 1;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 10px 14px;
-      border-radius: 8px;
-      color: #fff;
-      font-size: 13px;
-      outline: none;
-    }
-
-    .ai-chat-footer button {
-      background: var(--gold);
-      border: none;
-      padding: 0 16px;
-      border-radius: 8px;
-      color: #030712;
-      font-weight: 700;
-      cursor: pointer;
+    .ai-msg.user {
+      align-self: flex-end;
+      background: #2563eb;
+      color: white;
     }
 
     .quick-chips {
       display: flex;
-      gap: 6px;
       flex-wrap: wrap;
-      padding: 0 15px 10px 15px;
+      gap: 8px;
+      padding: 12px 14px 0;
+      background: rgba(15,23,42,0.95);
     }
 
     .chip {
-      background: rgba(245, 158, 11, 0.15);
-      border: 1px solid var(--gold);
-      color: #fbbf24;
+      background: rgba(245,158,11,0.12);
+      border: 1px solid rgba(245,158,11,0.3);
+      color: var(--gold-soft);
+      padding: 6px 10px;
+      border-radius: 999px;
       font-size: 11px;
-      padding: 4px 10px;
-      border-radius: 20px;
+      font-weight: 700;
       cursor: pointer;
-      transition: 0.2s;
     }
-    .chip:hover { background: var(--gold); color: #030712; }
 
-    footer {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      text-align: center;
-      padding: 35px 20px;
-      color: var(--text-muted);
-      font-size: 13.5px;
-      background: rgba(3, 7, 18, 0.98);
+    .ai-chat-footer {
+      display: flex;
+      gap: 8px;
+      background: rgba(15,23,42,0.95);
+      padding: 12px 14px 14px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .ai-chat-footer input {
+      flex: 1;
+      color: white;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 10px 12px;
+      outline: none;
+    }
+
+    .ai-chat-footer button {
+      border: none;
+      background: var(--gold);
+      border-radius: 10px;
+      color: #111827;
+      font-weight: 800;
+      padding: 0 16px;
+      cursor: pointer;
     }
 
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .widget-form { grid-template-columns: 1fr; }
+      .cta-banner { flex-direction: column; align-items: flex-start; }
+      h1 { max-width: 100%; }
     }
   </style>
 </head>
@@ -754,13 +854,463 @@
     <span>✨ Winter Tourist Season Special: Free 1-Day Guide & Custom Packages Active!</span>
   </div>
 
-  <div class="floating-buttons">
-    <div class="ai-chat-btn" onclick="toggleAIChat()" title="Ask AI Assistant">
-      <i class="fa-solid fa-robot"></i>
+  <header>
+    <div class="container nav">
+      <a href="#" class="brand-logo" aria-label="Explore India home">
+        <span class="logo-icon"><i class="fa-solid fa-compass"></i></span>
+        <span class="brand-name">EXPLORE INDIA</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#packages">Packages</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#adventures">Safaris</a>
+        <a href="#tariff">Tariff</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-box">
+          <i class="fa-solid fa-globe" style="color: var(--gold-soft);"></i>
+          <div id="google_translate_element"></div>
+        </div>
+      </div>
     </div>
-    <a href="https://wa.me/919252211011?text=Hi!%20I%20want%20to%20inquire%20about%20a%20tour%20package%20or%20cab." class="float-wa" target="_blank" title="Chat on WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="eyebrow"><i class="fa-solid fa-award"></i>India's Premier Heritage & Cab Portal</div>
+      <h1>Experience the Magic of <span class="gold-text">Incredible India</span></h1>
+      <p>Handcrafted multi-day luxury tours, verified cab services, heritage stays, desert safaris, and personalized travel planning for international guests.</p>
+      <div class="cta-row">
+        <a href="#packages" class="btn btn-primary"><i class="fa-solid fa-suitcase-rolling"></i> View Packages</a>
+        <a href="https://wa.me/919252211011?text=Hi%20I%20want%20to%20plan%20my%20India%20trip" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+      </div>
+
+      <div class="widget">
+        <div class="widget-tabs">
+          <button class="w-tab active" onclick="location.href='#packages'"><i class="fa-solid fa-suitcase-rolling"></i> Tour Packages</button>
+          <button class="w-tab" onclick="location.href='#tariff'"><i class="fa-solid fa-car"></i> Cab Rentals</button>
+          <button class="w-tab" onclick="location.href='#adventures'"><i class="fa-solid fa-paw"></i> Safaris</button>
+        </div>
+        <div class="widget-form">
+          <div class="input-group">
+            <label>Pickup / Destination</label>
+            <input type="text" placeholder="Jaipur, Delhi, Agra" aria-label="Pickup or destination">
+          </div>
+          <div class="input-group">
+            <label>Package / Vehicle</label>
+            <select aria-label="Package or vehicle type">
+              <option>3 Nights / 4 Days Tour</option>
+              <option>5 Nights / 6 Days Tour</option>
+              <option>9 Nights / 10 Days Tour</option>
+              <option>Sedan / SUV Cab</option>
+              <option>Force Urbania Luxury Van</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>Travel Date</label>
+            <input type="date" aria-label="Travel date">
+          </div>
+          <button class="search-btn" onclick="window.open('https://wa.me/919252211011?text=Hi,%20I%20want%20to%20plan%20a%20tour%20package/cab%20rental.', '_blank')">Inquire Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats-strip">
+    <div class="container stats-row">
+      <div class="stat-box">
+        <div class="stat-value">10K+</div>
+        <div class="stat-label">Happy Travelers</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-value">4.9/5</div>
+        <div class="stat-label">Average Rating</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-value">24/7</div>
+        <div class="stat-label">Trip Support</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-value">100%</div>
+        <div class="stat-label">Customizable</div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Why travelers choose Explore India</h2>
+          <p>From handpicked heritage circuits to trustworthy transport and local guidance, we make the journey comfortable, transparent, and memorable.</p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Verified Drivers</h3>
+            <p>Professional, English-speaking chauffeurs with verified records and local expertise.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fa-solid fa-sparkles"></i>
+            <h3>Luxury Experience</h3>
+            <p>Curated stays, premium cabs, and seamless itineraries designed for royal comfort.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fa-solid fa-dollar-sign"></i>
+            <h3>Transparent Pricing</h3>
+            <p>No hidden fees. Clear cost breakdowns before confirmation and payment.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fa-solid fa-headset"></i>
+            <h3>On-Trip Support</h3>
+            <p>Responsive team support throughout your travel, from pickup to drop-off.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="packages">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured Multi-Day Packages</h2>
+          <p>Royal routes, iconic monuments, immersive culture, and curated local experiences.</p>
+        </div>
+        <div class="tour-grid">
+          <article class="tour-card">
+            <div class="card-media">
+              <div class="rating-badge"><i class="fa-solid fa-star"></i> 4.9 (840)</div>
+              <span class="badge-pill">3N / 4D</span>
+              <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80" alt="Golden Triangle Tour">
+            </div>
+            <div class="card-body">
+              <h3>Golden Triangle Express</h3>
+              <p><strong>Delhi – Agra – Jaipur</strong>. Classic India introduction covering Red Fort, Taj Mahal, and royal Jaipur.</p>
+              <ul class="feature-list">
+                <li><i class="fa-solid fa-check"></i> Day 1: Delhi sightseeing & drive to Agra</li>
+                <li><i class="fa-solid fa-check"></i> Day 2: Sunrise Taj Mahal & drive to Jaipur</li>
+                <li><i class="fa-solid fa-check"></i> Day 3: Amer Fort, City Palace & Hawa Mahal</li>
+                <li><i class="fa-solid fa-check"></i> Day 4: Local bazaars & departure</li>
+              </ul>
+              <div class="card-footer">
+                <span class="tag">Customizable</span>
+                <a href="https://wa.me/919252211011?text=Hi!%20I%20am%20interested%20in%20the%203%20Nights%20/%204%20Days%20Golden%20Triangle%20Package.%20Please%20share%20details%20and%20quote." target="_blank" class="action-link"><i class="fa-brands fa-whatsapp"></i> Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card" style="border: 1px solid var(--gold);">
+            <div class="card-media">
+              <div class="rating-badge"><i class="fa-solid fa-star"></i> 5.0 (1.4k)</div>
+              <span class="badge-pill" style="background: var(--gold-gradient); color:#111827;">Most Popular</span>
+              <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80" alt="Royal Rajasthan Tour">
+            </div>
+            <div class="card-body">
+              <h3>Royal Rajasthan Odyssey</h3>
+              <p><strong>Jaipur – Pushkar – Jodhpur – Udaipur</strong>. Palace stays, desert vibes, and lakeside romance in one royal route.</p>
+              <ul class="feature-list">
+                <li><i class="fa-solid fa-check"></i> Day 1-2: Pink city palaces & Amer Fort</li>
+                <li><i class="fa-solid fa-check"></i> Day 3: Pushkar & Jodhpur drive</li>
+                <li><i class="fa-solid fa-check"></i> Day 4: Mehrangarh Fort & Ranakpur</li>
+                <li><i class="fa-solid fa-check"></i> Day 5-6: Udaipur Lake Pichola</li>
+              </ul>
+              <div class="card-footer">
+                <span class="tag">Includes Free Guide</span>
+                <a href="https://wa.me/919252211011?text=Hi!%20I%20am%20interested%20in%20the%205%20Nights%20/%206%20Days%20Royal%20Rajasthan%20Package.%20Please%20share%20quotation." target="_blank" class="action-link"><i class="fa-brands fa-whatsapp"></i> Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card">
+            <div class="card-media">
+              <div class="rating-badge"><i class="fa-solid fa-star"></i> 4.9 (620)</div>
+              <span class="badge-pill">9N / 10D</span>
+              <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80" alt="Grand Rajasthan Safari">
+            </div>
+            <div class="card-body">
+              <h3>Grand Imperial Desert & Lakes</h3>
+              <p><strong>Delhi – Agra – Jaipur – Bikaner – Jaisalmer – Jodhpur – Udaipur</strong>. Best for heritage + desert + luxury camp lovers.</p>
+              <ul class="feature-list">
+                <li><i class="fa-solid fa-check"></i> Day 1-3: Delhi, Taj Mahal & Jaipur</li>
+                <li><i class="fa-solid fa-check"></i> Day 4-6: Bikaner & Jaisalmer dunes</li>
+                <li><i class="fa-solid fa-check"></i> Day 7-8: Jodhpur & Mehrangarh</li>
+                <li><i class="fa-solid fa-check"></i> Day 9-10: Udaipur & departure</li>
+              </ul>
+              <div class="card-footer">
+                <span class="tag">Luxury & Camps</span>
+                <a href="https://wa.me/919252211011?text=Hi!%20I%20am%20interested%20in%20the%209%20Nights%20/%2010%20Days%20Grand%20Imperial%20Rajasthan%20Package.%20Please%20share%20details." target="_blank" class="action-link"><i class="fa-brands fa-whatsapp"></i> Book</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="destinations">
+      <div class="container">
+        <div class="section-head">
+          <h2>Top Heritage Destinations</h2>
+          <p>Iconic monuments and royal landmarks that define India's grandeur.</p>
+        </div>
+        <div class="dest-grid">
+          <article class="tour-card">
+            <div class="card-media">
+              <div class="rating-badge"><i class="fa-solid fa-star"></i> 4.9 (1.2k)</div>
+              <span class="badge-pill">Jaipur</span>
+              <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80" alt="Amer Fort Jaipur">
+            </div>
+            <div class="card-body">
+              <h3>Amer Fort, Jaipur</h3>
+              <p>Majestic hilltop fortress with Rajput architecture, mirrors, and grand courtyards.</p>
+              <div class="card-footer">
+                <span class="tag">Guided Tour</span>
+                <a href="https://wa.me/919252211011?text=I%20want%20to%20book%20Amer%20Fort%20Tour" target="_blank" class="action-link"><i class="fa-brands fa-whatsapp"></i> Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card">
+            <div class="card-media">
+              <div class="rating-badge"><i class="fa-solid fa-star"></i> 4.8 (980)</div>
+              <span class="badge-pill">Jaipur</span>
+              <img src="https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?auto=format&fit=crop&w=800&q=80" alt="Hawa Mahal Jaipur">
+            </div>
+            <div class="card-body">
+              <h3>Hawa Mahal</h3>
+              <p>Iconic pink sandstone monument with 953 intricately carved windows and heritage charm.</p>
+              <div class="card-footer">
+                <span class="tag">City Sightseeing</span>
+                <a href="https://wa.me/919252211011?text=I%20want%20to%20book%20Hawa%20Mahal%20Tour" target="_blank" class="action-link"><i class="fa-brands fa-whatsapp"></i> Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card">
+            <div class="card-media">
+              <div class="rating-badge"><i class="fa-solid fa-star"></i> 5.0 (3.4k)</div>
+              <span class="badge-pill">Agra</span>
+              <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80" alt="Taj Mahal Agra">
+            </div>
+            <div class="card-body">
+              <h3>The Eternal Taj Mahal</h3>
+              <p>Experience the mesmerizing white marble marvel recognized globally for architectural brilliance.</p>
+              <div class="card-footer">
+                <span class="tag">Same Day Tour</span>
+                <a href="https://wa.me/919252211011?text=I%20want%20to%20book%20Taj%20Mahal%20Tour" target="_blank" class="action-link"><i class="fa-brands fa-whatsapp"></i> Book</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="adventures">
+      <div class="container">
+        <div class="section-head">
+          <h2>Thrilling Adventures & Safaris</h2>
+          <p>Unforgettable desert adventures, wildlife sightseeing, and aerial experiences.</p>
+        </div>
+        <div class="adv-grid">
+          <article class="tour-card">
+            <div class="card-media">
+              <div class="rating-badge"><i class="fa-solid fa-star"></i> 4.9 (450)</div>
+              <span class="badge-pill">Sky Tour</span>
+              <img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?auto=format&fit=crop&w=800&q=80" alt="Hot Air Balloon">
+            </div>
+            <div class="card-body">
+              <h3>Hot Air Balloon Safari</h3>
+              <p>Sunrise flights over forts, valleys, and hills for an unforgettable air-view experience.</p>
+              <div class="card-footer">
+                <span class="tag">Sunrise Special</span>
+                <a href="https://wa.me/919252211011?text=I%20want%20to%20book%20Hot%20Air%20Balloon" target="_blank" class="action-link"><i class="fa-brands fa-whatsapp"></i> Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card">
+            <div class="card-media">
+              <div class="rating-badge"><i class="fa-solid fa-star"></i> 4.8 (820)</div>
+              <span class="badge-pill">Offroad</span>
+              <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80" alt="Jeep Safari">
+            </div>
+            <div class="card-body">
+              <h3>4x4 Dune Jeep Safari</h3>
+              <p>Adrenaline-filled desert trails and dune bashing in Jaisalmer with expert guides.</p>
+              <div class="card-footer">
+                <span class="tag">Desert Thrill</span>
+                <a href="https://wa.me/919252211011?text=I%20want%20to%20book%20Jeep%20Safari" target="_blank" class="action-link"><i class="fa-brands fa-whatsapp"></i> Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card">
+            <div class="card-media">
+              <div class="rating-badge"><i class="fa-solid fa-star"></i> 4.9 (910)</div>
+              <span class="badge-pill">Wildlife</span>
+              <img src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=800&q=80" alt="Tiger Safari">
+            </div>
+            <div class="card-body">
+              <h3>Ranthambore Tiger Safari</h3>
+              <p>Track the Royal Bengal Tiger in its natural habitat for an unforgettable jungle adventure.</p>
+              <div class="card-footer">
+                <span class="tag">Jungle Gypsy</span>
+                <a href="https://wa.me/919252211011?text=I%20want%20to%20book%20Tiger%20Safari" target="_blank" class="action-link"><i class="fa-brands fa-whatsapp"></i> Book</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tariff">
+      <div class="container">
+        <div class="section-head">
+          <h2>Taxi & Bus Rental Tariff</h2>
+          <p>Transparent pricing for Jaipur local and outstation travel.</p>
+        </div>
+
+        <div class="offer-grid" style="margin-bottom: 28px;">
+          <div class="offer-card">
+            <i class="fa-solid fa-car-side"></i>
+            <h3>Sedan & SUV Fleet</h3>
+            <p>Dzire, Etios, Ertiga, and Innova Crysta for family trips and city sightseeing.</p>
+            <a class="offer-btn" href="https://wa.me/919252211011?text=I%20want%20to%20book%20Cab" target="_blank">Book Cab</a>
+          </div>
+          <div class="offer-card">
+            <i class="fa-solid fa-van-shuttle"></i>
+            <h3>Force Urbania Luxury Vans</h3>
+            <p>9+1 to 16+1 seater premium vans with push-back seats and dual AC comfort.</p>
+            <a class="offer-btn" href="https://wa.me/919252211011?text=I%20want%20to%20book%20Urbania" target="_blank">Book Urbania</a>
+          </div>
+          <div class="offer-card">
+            <i class="fa-solid fa-bus"></i>
+            <h3>Mini & Deluxe Buses</h3>
+            <p>22+1 to 45+1 seater vehicles for weddings, corporate trips, and group tours.</p>
+            <a class="offer-btn" href="https://wa.me/919252211011?text=I%20want%20to%20book%20Bus" target="_blank">Book Bus</a>
+          </div>
+        </div>
+
+        <div class="pricing-wrap">
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th>Vehicle Name</th>
+                <th>Capacity</th>
+                <th>Package Rate (8 Hrs / 80 Km)</th>
+                <th>Extra Hour</th>
+                <th>Extra Km</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Swift Dzire / Etios</td>
+                <td>4+1 Seater</td>
+                <td><strong>₹2,200/-</strong></td>
+                <td>₹200 / Hour</td>
+                <td>₹10 / Km</td>
+              </tr>
+              <tr>
+                <td>Ertiga (SUV)</td>
+                <td>6+1 Seater</td>
+                <td><strong>₹2,600/-</strong></td>
+                <td>₹250 / Hour</td>
+                <td>₹10 / Km</td>
+              </tr>
+              <tr>
+                <td>Innova Crysta</td>
+                <td>6+1 / 7+1 Seater</td>
+                <td><strong>₹3,500/-</strong></td>
+                <td>₹300 / Hour</td>
+                <td>₹10 / Km</td>
+              </tr>
+              <tr>
+                <td>Force Urbania</td>
+                <td>9+1 Seater</td>
+                <td><strong>₹5,500/-</strong></td>
+                <td>₹500 / Hour</td>
+                <td>₹10 / Km</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <h2>Frequently Asked Questions</h2>
+          <p>Everything you need to know before confirming your trip.</p>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item">
+            <h4>Can I customize the packages?</h4>
+            <p>Yes. All our packages are fully customizable. You can alter destinations, add days, switch hotel categories, or update your transport mode according to your mood and budget.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Can I book hotels through you?</h4>
+            <p>Absolutely. You can either choose your own hotel or let us arrange one. If booked through us, we ensure wholesale pricing and vetted quality stays.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Do you provide free guide service?</h4>
+            <p>Yes. When you book a multi-city package, we can arrange a complimentary 1-day guide in your preferred city.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Are tolls and parking included?</h4>
+            <p>Local packages usually include fuel and driver allowance. Outstation trips may include tolls and parking based on actual receipts, which are shared transparently.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <h2>Traveler Reviews</h2>
+          <p>Trusted by global travelers for reliable service and memorable journeys.</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>“The 5N/6D Rajasthan package was well planned and stress-free. The driver was punctual, and the local guide in Jaipur was exceptional.”</p>
+            <div class="testimonial-author">- David Miller, London</div>
+          </div>
+          <div class="testimonial">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>“Transparent pricing, amazing support, and great hospitality. We booked an Innova Crysta and got a seamless family trip.”</p>
+            <div class="testimonial-author">- Sneha & Family, Bangalore</div>
+          </div>
+          <div class="testimonial">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>“Our Jaisalmer desert safari and heritage stay were wonderful. Highly recommended for luxury travel in India.”</p>
+            <div class="testimonial-author">- Lucas Moreau, Paris</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta-banner">
+          <div>
+            <h3>Ready to plan your unforgettable India journey?</h3>
+            <p>Get a custom itinerary, pricing, and local support from our travel team.</p>
+          </div>
+          <a href="https://wa.me/919252211011?text=Hi%20I%20want%20a%20custom%20India%20travel%20plan" target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Book via WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 <strong>Explore India</strong>. All Rights Reserved. Crafted for world explorers and international tourists.
+    </div>
+  </footer>
+
+  <div class="floating-buttons">
+    <div class="ai-chat-btn" onclick="toggleAIChat()" title="Ask AI Assistant"><i class="fa-solid fa-robot"></i></div>
+    <a href="https://wa.me/919252211011?text=Hi!%20I%20want%20to%20inquire%20about%20a%20tour%20package%20or%20cab." class="float-wa" target="_blank" title="WhatsApp Chat"><i class="fa-brands fa-whatsapp"></i></a>
   </div>
 
   <div class="ai-chat-box" id="aiChatBox">
@@ -769,13 +1319,13 @@
       <i class="fa-solid fa-xmark" onclick="toggleAIChat()"></i>
     </div>
     <div class="ai-chat-body" id="chatBody">
-      <div class="ai-msg bot">Namaste! I am your AI Travel Assistant. How can I help you plan your India trip? Ask me about our 3N/4D, 5N/6D, 9N/10D packages, cabs, or hotel stays!</div>
+      <div class="ai-msg bot">Namaste! I am your AI Travel Assistant. Tell me your preferred destination, travel dates, and budget.</div>
     </div>
     <div class="quick-chips">
       <span class="chip" onclick="sendQuickQuery('Packages')">Tour Packages</span>
-      <span class="chip" onclick="sendQuickQuery('Free Guide')">Free Guide?</span>
-      <span class="chip" onclick="sendQuickQuery('Hotels')">Hotel Rates</span>
-      <span class="chip" onclick="sendQuickQuery('Cabs')">Cab Tariffs</span>
+      <span class="chip" onclick="sendQuickQuery('Free Guide')">Free Guide</span>
+      <span class="chip" onclick="sendQuickQuery('Hotels')">Hotels</span>
+      <span class="chip" onclick="sendQuickQuery('Cabs')">Cabs</span>
     </div>
     <div class="ai-chat-footer">
       <input type="text" id="userInput" placeholder="Type your question..." onkeypress="handleKeyPress(event)">
@@ -783,569 +1333,22 @@
     </div>
   </div>
 
-  <header>
-    <a href="#" class="brand-logo">
-      <div class="logo-icon"><i class="fa-solid fa-compass"></i></div>
-      <span class="brand-name">EXPLORE INDIA</span>
-    </a>
-
-    <div class="nav-links">
-      <a href="#packages">Tour Packages</a>
-      <a href="#destinations">Destinations</a>
-      <a href="#adventures">Safaris</a>
-      <a href="#fleet">Cabs & Fleet</a>
-      <a href="#tariff">Tariff</a>
-      <a href="#faq">FAQ</a>
-    </div>
-
-    <div class="header-right">
-      <div class="lang-box">
-        <i class="fa-solid fa-globe" style="color: #fbbf24;"></i>
-        <div id="google_translate_element"></div>
-      </div>
-    </div>
-  </header>
-
-  <section class="hero">
-    <span class="hero-badge"><i class="fa-solid fa-award"></i> INDIA'S PREMIER HERITAGE & CAB PORTAL</span>
-    <h1>EXPERIENCE THE MAGIC OF <span>INCREDIBLE INDIA</span></h1>
-    <p>Handcrafted multi-day royal tour packages, verified luxury cabs, desert safaris, and wholesale hotel bookings for global travelers.</p>
-    
-    <div class="booking-widget">
-      <div class="widget-tabs">
-        <button class="w-tab active" onclick="location.href='#packages'"><i class="fa-solid fa-suitcase-rolling"></i> Tour Packages</button>
-        <button class="w-tab" onclick="location.href='#tariff'"><i class="fa-solid fa-car"></i> Cab Rentals</button>
-        <button class="w-tab" onclick="location.href='#adventures'"><i class="fa-solid fa-paw"></i> Safaris</button>
-      </div>
-      <div class="widget-form">
-        <div class="input-group">
-          <label>Pickup / Destination</label>
-          <input type="text" placeholder="e.g. Jaipur, Delhi, Agra">
-        </div>
-        <div class="input-group">
-          <label>Package / Vehicle Type</label>
-          <select>
-            <option>3 Nights / 4 Days Tour</option>
-            <option>5 Nights / 6 Days Tour</option>
-            <option>9 Nights / 10 Days Tour</option>
-            <option>Sedan / SUV Cab</option>
-            <option>Force Urbania Luxury Van</option>
-          </select>
-        </div>
-        <div class="input-group">
-          <label>Travel Date</label>
-          <input type="date">
-        </div>
-        <button class="search-btn" onclick="window.open('https://wa.me/919252211011?text=Hi,%20I%20want%20to%20plan%20a%20tour%20package/cab%20rental.', '_blank')">Inquire Now</button>
-      </div>
-    </div>
-  </section>
-
-  <div class="offers-container">
-    <div class="offer-card">
-      <div>
-        <h3><i class="fa-solid fa-gift"></i> Free 1-Day Tour Guide</h3>
-        <p>Book any multi-city tour or outstation cab package and get a <strong>Complimentary Expert Tour Guide</strong> for 1 full day in your preferred city absolutely free!</p>
-      </div>
-      <a href="https://wa.me/919252211011?text=Hi,%20I%20want%20to%20claim%20my%20Free%201-Day%20Tour%20Guide%20offer!" target="_blank" class="offer-btn">Claim Free Guide</a>
-    </div>
-
-    <div class="offer-card">
-      <div>
-        <h3><i class="fa-solid fa-tags"></i> Shopping & Rate Guarantee</h3>
-        <p>We take you to verified authentic artisan bazaars in Jaipur, Delhi & Agra with guaranteed wholesale prices on jewellery, textiles, and handicrafts!</p>
-      </div>
-      <a href="https://wa.me/919252211011?text=Hi,%20I%20want%20to%20know%20more%20about%20Shopping%20&%20Best%20Rate%20Guarantee!" target="_blank" class="offer-btn">Explore Shopping Deals</a>
-    </div>
-
-    <div class="offer-card">
-      <div>
-        <h3><i class="fa-solid fa-hotel"></i> Custom Hotel Bookings</h3>
-        <p>Choose hotels based on your choice and budget! If booked through us, we guarantee the <strong>best wholesale rates</strong> on Heritage Haveli, Boutique & Luxury 5-Star stays.</p>
-      </div>
-      <a href="https://wa.me/919252211011?text=Hi,%20I%20want%20to%20inquire%20about%20hotel%20rates!" target="_blank" class="offer-btn">Inquire Hotel Rates</a>
-    </div>
-  </div>
-
-  <div class="trust-strip">
-    <div class="trust-badge-item"><i class="fa-solid fa-shield-halved"></i> 100% Verified English-Speaking Drivers</div>
-    <div class="trust-badge-item"><i class="fa-solid fa-sliders"></i> Fully Customizable Itineraries</div>
-    <div class="trust-badge-item"><i class="fa-solid fa-file-invoice-dollar"></i> Transparent Pricing (No Hidden Costs)</div>
-    <div class="trust-badge-item"><i class="fa-solid fa-headset"></i> 24/7 Dedicated Trip Coordinator</div>
-  </div>
-
-  <section class="section-wrap" id="packages">
-    <div class="section-header">
-      <div>
-        <h2>Featured Multi-Day Tour Packages</h2>
-        <p>Carefully planned royal routes with private sanitized cabs, top hotels, and local sightseeing</p>
-      </div>
-    </div>
-
-    <div class="cards-grid">
-      <article class="tilt-card">
-        <div class="card-media">
-          <div class="rating-badge"><i class="fa-solid fa-star"></i> 4.9 (840)</div>
-          <span class="badge-float">3N / 4D</span>
-          <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80" alt="Golden Triangle Tour">
-        </div>
-        <div class="card-content">
-          <h3>Golden Triangle Express</h3>
-          <p><strong>Delhi – Agra – Jaipur</strong>. The classic Indian introduction covering the Red Fort, Taj Mahal, and the royal palaces of Jaipur.</p>
-          <ul class="package-features">
-            <li><i class="fa-solid fa-check"></i> <strong>Day 1:</strong> Delhi Sightseeing & Drive to Agra</li>
-            <li><i class="fa-solid fa-check"></i> <strong>Day 2:</strong> Sunrise Taj Mahal & Drive to Jaipur</li>
-            <li><i class="fa-solid fa-check"></i> <strong>Day 3:</strong> Amer Fort, City Palace & Hawa Mahal</li>
-            <li><i class="fa-solid fa-check"></i> <strong>Day 4:</strong> Local Bazaars & Departure</li>
-          </ul>
-          <div class="card-footer">
-            <span style="color:#fbbf24; font-weight:700;">Customizable</span>
-            <a href="https://wa.me/919252211011?text=Hi!%20I%20am%20interested%20in%20the%203%20Nights%20/%204%20Days%20Golden%20Triangle%20Package.%20Please%20share%20details%20and%20quote." target="_blank" class="action-link"><i class="fa-brands fa-whatsapp"></i> Book 3N/4D Tour</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="tilt-card" style="border: 1px solid var(--gold);">
-        <div class="card-media">
-          <div class="rating-badge"><i class="fa-solid fa-star"></i> 5.0 (1.4k)</div>
-          <span class="badge-float" style="background:var(--gold); color:#000; font-weight:700;">Most Popular • 5N / 6D</span>
-          <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80" alt="Royal Rajasthan Tour">
-        </div>
-        <div class="card-content">
-          <h3>Royal Rajasthan Odyssey</h3>
-          <p><strong>Jaipur – Pushkar – Jodhpur – Udaipur</strong>. The most sought-after royal circuit taking you through majestic forts, sacred lakes, and romantic city of lakes.</p>
-          <ul class="package-features">
-            <li><i class="fa-solid fa-check"></i> <strong>Day 1-2:</strong> Pink City Palaces & Amer Fort</li>
-            <li><i class="fa-solid fa-check"></i> <strong>Day 3:</strong> Pushkar Brahma Temple & Jodhpur Drive</li>
-            <li><i class="fa-solid fa-check"></i> <strong>Day 4:</strong> Mehrangarh Fort & Ranakpur Jain Temples</li>
-            <li><i class="fa-solid fa-check"></i> <strong>Day 5-6:</strong> Udaipur Lake Pichola & City Palace</li>
-          </ul>
-          <div class="card-footer">
-            <span style="color:#fbbf24; font-weight:700;">Includes Free Guide</span>
-            <a href="https://wa.me/919252211011?text=Hi!%20I%20am%20interested%20in%20the%205%20Nights%20/%206%20Days%20Royal%20Rajasthan%20Package.%20Please%20share%20quotation." target="_blank" class="action-link"><i class="fa-brands fa-whatsapp"></i> Book 5N/6D Tour</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="tilt-card">
-        <div class="card-media">
-          <div class="rating-badge"><i class="fa-solid fa-star"></i> 4.9 (620)</div>
-          <span class="badge-float">9N / 10D</span>
-          <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80" alt="Grand Rajasthan Safari">
-        </div>
-        <div class="card-content">
-          <h3>Grand Imperial Desert & Lakes</h3>
-          <p><strong>Delhi – Agra – Jaipur – Bikaner – Jaisalmer – Jodhpur – Udaipur</strong>. The ultimate Indian heritage & Thar desert adventure with luxury camp stay.</p>
-          <ul class="package-features">
-            <li><i class="fa-solid fa-check"></i> <strong>Day 1-3:</strong> Delhi & Taj Mahal & Jaipur</li>
-            <li><i class="fa-solid fa-check"></i> <strong>Day 4-6:</strong> Bikaner Junagarh & Jaisalmer Sam Sand Dunes</li>
-            <li><i class="fa-solid fa-check"></i> <strong>Day 7-8:</strong> Blue City Jodhpur & Mehrangarh Fort</li>
-            <li><i class="fa-solid fa-check"></i> <strong>Day 9-10:</strong> Udaipur Palace, Lake Cruise & Departure</li>
-          </ul>
-          <div class="card-footer">
-            <span style="color:#fbbf24; font-weight:700;">Luxury & Camps</span>
-            <a href="https://wa.me/919252211011?text=Hi!%20I%20am%20interested%20in%20the%209%20Nights%20/%2010%20Days%20Grand%20Imperial%20Rajasthan%20Package.%20Please%20share%20details." target="_blank" class="action-link"><i class="fa-brands fa-whatsapp"></i> Book 9N/10D Tour</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="section-wrap" id="destinations">
-    <div class="section-header">
-      <div>
-        <h2>Top Heritage Destinations</h2>
-        <p>Iconic architectural wonders and royal landmarks</p>
-      </div>
-    </div>
-
-    <div class="cards-grid">
-      <article class="tilt-card">
-        <div class="card-media">
-          <div class="rating-badge"><i class="fa-solid fa-star"></i> 4.9 (1.2k)</div>
-          <span class="badge-float">Jaipur</span>
-          <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80" alt="Amer Fort Jaipur">
-        </div>
-        <div class="card-content">
-          <h3>Amer Fort, Jaipur</h3>
-          <p>Majestic hilltop fortress showcasing classic Rajput architecture, grand courtyards, and mirror palaces.</p>
-          <div class="card-footer">
-            <span style="color:#fbbf24; font-weight:700;">Guided Tour</span>
-            <a href="https://wa.me/919252211011?text=I%20want%20to%20book%20Amer%20Fort%20Tour" target="_blank" class="action-link"><i class="fa-brands fa-whatsapp"></i> Book via WhatsApp</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="tilt-card">
-        <div class="card-media">
-          <div class="rating-badge"><i class="fa-solid fa-star"></i> 4.8 (980)</div>
-          <span class="badge-float">Jaipur</span>
-          <img src="https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?auto=format&fit=crop&w=800&q=80" alt="Hawa Mahal Jaipur">
-        </div>
-        <div class="card-content">
-          <h3>Hawa Mahal, Jaipur</h3>
-          <p>The iconic Palace of Winds featuring 953 intricate jharokhas in the heart of the pink city.</p>
-          <div class="card-footer">
-            <span style="color:#fbbf24; font-weight:700;">City Sightseeing</span>
-            <a href="https://wa.me/919252211011?text=I%20want%20to%20book%20Hawa%20Mahal%20Tour" target="_blank" class="action-link"><i class="fa-brands fa-whatsapp"></i> Book via WhatsApp</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="tilt-card">
-        <div class="card-media">
-          <div class="rating-badge"><i class="fa-solid fa-star"></i> 5.0 (3.4k)</div>
-          <span class="badge-float">Agra</span>
-          <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80" alt="Taj Mahal Agra">
-        </div>
-        <div class="card-content">
-          <h3>The Eternal Taj Mahal</h3>
-          <p>Experience the timeless white marble wonder of Agra, recognized worldwide as an architectural masterpiece.</p>
-          <div class="card-footer">
-            <span style="color:#fbbf24; font-weight:700;">Same Day Tour</span>
-            <a href="https://wa.me/919252211011?text=I%20want%20to%20book%20Taj%20Mahal%20Tour" target="_blank" class="action-link"><i class="fa-brands fa-whatsapp"></i> Book via WhatsApp</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="section-wrap" id="adventures">
-    <div class="section-header">
-      <div>
-        <h2>Thrilling Adventures & Safaris</h2>
-        <p>Unforgettable desert expeditions and wildlife encounters</p>
-      </div>
-    </div>
-
-    <div class="cards-grid">
-      <article class="tilt-card">
-        <div class="card-media">
-          <div class="rating-badge"><i class="fa-solid fa-star"></i> 4.9 (450)</div>
-          <span class="badge-float">Sky Tour</span>
-          <img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?auto=format&fit=crop&w=800&q=80" alt="Hot Air Balloon">
-        </div>
-        <div class="card-content">
-          <h3>Hot Air Balloon Safari</h3>
-          <p>Glide smoothly over majestic forts and Aravali ranges at sunrise in Jaipur and Pushkar.</p>
-          <div class="card-footer">
-            <span style="color:#fbbf24; font-weight:700;">Sunrise Special</span>
-            <a href="https://wa.me/919252211011?text=I%20want%20to%20book%20Hot%20Air%20Balloon" target="_blank" class="action-link"><i class="fa-brands fa-whatsapp"></i> Book via WhatsApp</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="tilt-card">
-        <div class="card-media">
-          <div class="rating-badge"><i class="fa-solid fa-star"></i> 4.8 (820)</div>
-          <span class="badge-float">Offroad</span>
-          <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80" alt="Jeep Safari">
-        </div>
-        <div class="card-content">
-          <h3>4x4 Dune Jeep Safari</h3>
-          <p>Adrenaline-pumping dune bashing and desert trail cruising in powerful 4x4 vehicles in Jaisalmer.</p>
-          <div class="card-footer">
-            <span style="color:#fbbf24; font-weight:700;">Desert Thrill</span>
-            <a href="https://wa.me/919252211011?text=I%20want%20to%20book%20Jeep%20Safari" target="_blank" class="action-link"><i class="fa-brands fa-whatsapp"></i> Book via WhatsApp</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="tilt-card">
-        <div class="card-media">
-          <div class="rating-badge"><i class="fa-solid fa-star"></i> 4.9 (910)</div>
-          <span class="badge-float">Wildlife</span>
-          <img src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=800&q=80" alt="Tiger Safari">
-        </div>
-        <div class="card-content">
-          <h3>Ranthambore Tiger Safari</h3>
-          <p>Spot the majestic Royal Bengal Tiger in its natural habitat at Ranthambore National Park.</p>
-          <div class="card-footer">
-            <span style="color:#fbbf24; font-weight:700;">Jungle Gypsy</span>
-            <a href="https://wa.me/919252211011?text=I%20want%20to%20book%20Tiger%20Safari" target="_blank" class="action-link"><i class="fa-brands fa-whatsapp"></i> Book via WhatsApp</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="section-wrap" id="tariff">
-    <div class="section-header">
-      <div>
-        <h2>Taxi & Bus Rental Tariff</h2>
-        <p>Transparent pricing for Jaipur Local & Outstation travel</p>
-      </div>
-    </div>
-
-    <div class="cards-grid" id="fleet" style="margin-bottom: 50px;">
-      <article class="tilt-card">
-        <div class="card-media">
-          <div class="rating-badge"><i class="fa-solid fa-star"></i> 4.9</div>
-          <span class="badge-float">4-7 Seater</span>
-          <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80" alt="Sedan SUV Cabs">
-        </div>
-        <div class="card-content">
-          <h3>Sedan & SUV Fleet</h3>
-          <p>Dzire, Etios, Ertiga & Innova Crysta for comfortable family trips and local sightseeing.</p>
-          <div class="card-footer">
-            <span style="color:#fbbf24; font-weight:700;">From ₹12/Km</span>
-            <a href="https://wa.me/919252211011?text=I%20want%20to%20book%20Cab" target="_blank" class="action-link"><i class="fa-brands fa-whatsapp"></i> Book Cab</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="tilt-card">
-        <div class="card-media">
-          <div class="rating-badge"><i class="fa-solid fa-star"></i> 5.0</div>
-          <span class="badge-float">Luxury Van</span>
-          <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=800&q=80" alt="Force Urbania Luxury Van">
-        </div>
-        <div class="card-content">
-          <h3>Force Urbania Luxury Vans</h3>
-          <p>Ultra-luxury 9+1, 12+1 and 16+1 seater vans with push-back captain seats and dual AC.</p>
-          <div class="card-footer">
-            <span style="color:#fbbf24; font-weight:700;">From ₹25/Km</span>
-            <a href="https://wa.me/919252211011?text=I%20want%20to%20book%20Urbania" target="_blank" class="action-link"><i class="fa-brands fa-whatsapp"></i> Book Urbania</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="tilt-card">
-        <div class="card-media">
-          <div class="rating-badge"><i class="fa-solid fa-star"></i> 4.8</div>
-          <span class="badge-float">Group Travel</span>
-          <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80" alt="Deluxe Tourist Bus">
-        </div>
-        <div class="card-content">
-          <h3>Mini & Deluxe Tourist Buses</h3>
-          <p>Spacious 22 to 45+ seater buses for corporate tours, weddings, and large travel groups.</p>
-          <div class="card-footer">
-            <span style="color:#fbbf24; font-weight:700;">Group Booking</span>
-            <a href="https://wa.me/919252211011?text=I%20want%20to%20book%20Bus" target="_blank" class="action-link"><i class="fa-brands fa-whatsapp"></i> Book Bus</a>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <h3 style="font-family: 'Cinzel', serif; color: var(--gold); font-size: 1.3rem; margin-bottom: 12px;">1. Jaipur Local Taxi Package (8 Hours / 80 Km)</h3>
-    <div class="table-container">
-      <table class="pricing-table">
-        <thead>
-          <tr>
-            <th>Vehicle Name</th>
-            <th>Seating Capacity</th>
-            <th>Package Rate (8 Hrs / 80 Km)</th>
-            <th>Extra Hour</th>
-            <th>Extra Km</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Swift Dzire / Etios (Sedan)</td>
-            <td>4+1 Seater</td>
-            <td><strong style="color:var(--gold);">₹2,200/-</strong></td>
-            <td>₹200 / Hour</td>
-            <td>₹10 / Km</td>
-          </tr>
-          <tr>
-            <td>Ertiga (SUV)</td>
-            <td>6+1 Seater</td>
-            <td><strong style="color:var(--gold);">₹2,600/-</strong></td>
-            <td>₹250 / Hour</td>
-            <td>₹10 / Km</td>
-          </tr>
-          <tr>
-            <td>Innova Crysta (Premium)</td>
-            <td>6+1 / 7+1 Seater</td>
-            <td><strong style="color:var(--gold);">₹3,500/-</strong></td>
-            <td>₹300 / Hour</td>
-            <td>₹10 / Km</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3 style="font-family: 'Cinzel', serif; color: var(--gold); font-size: 1.3rem; margin: 35px 0 12px;">2. Urbania & Bus Package (Local - 8 Hours)</h3>
-    <div class="table-container">
-      <table class="pricing-table">
-        <thead>
-          <tr>
-            <th>Vehicle Type</th>
-            <th>Seating Capacity</th>
-            <th>Rental Rate (8 Hours Package)</th>
-            <th>Extra Hour</th>
-            <th>Extra Km</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Force Urbania</td>
-            <td>9+1 Seater</td>
-            <td><strong style="color:var(--gold);">₹5,500/-</strong></td>
-            <td>₹500 / Hour</td>
-            <td>₹10 / Km</td>
-          </tr>
-          <tr>
-            <td>Force Urbania Tempo</td>
-            <td>12+1 Seater</td>
-            <td><strong style="color:var(--gold);">₹6,500/-</strong></td>
-            <td>₹600 / Hour</td>
-            <td>₹10 / Km</td>
-          </tr>
-          <tr>
-            <td>Force Urbania</td>
-            <td>16+1 Seater</td>
-            <td><strong style="color:var(--gold);">₹8,500/-</strong></td>
-            <td>₹800 / Hour</td>
-            <td>₹10 / Km</td>
-          </tr>
-          <tr>
-            <td>Mini Bus</td>
-            <td>22+1 / 27+1 Seater</td>
-            <td><strong style="color:var(--gold);">₹10,500 - ₹12,500/-</strong></td>
-            <td>₹1,000 / Hour</td>
-            <td>₹10 / Km</td>
-          </tr>
-          <tr>
-            <td>Deluxe Bus</td>
-            <td>35+1 to 45+1 Seater</td>
-            <td><strong style="color:var(--gold);">₹14,500 - ₹16,500/-</strong></td>
-            <td>₹1,000 / Hour</td>
-            <td>₹10 / Km</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3 style="font-family: 'Cinzel', serif; color: var(--gold); font-size: 1.3rem; margin: 35px 0 12px;">3. Outstation Per Km Rates</h3>
-    <div class="table-container">
-      <table class="pricing-table">
-        <thead>
-          <tr>
-            <th>Vehicle / Vehicle Type</th>
-            <th>Rate (Per Km)</th>
-            <th>Minimum Km Per Day</th>
-            <th>Night Charge (Per Night)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Swift Dzire / Etios</td>
-            <td><strong style="color:var(--gold);">₹12 / Km</strong></td>
-            <td>250 Km / Day</td>
-            <td>₹300/-</td>
-          </tr>
-          <tr>
-            <td>Ertiga</td>
-            <td><strong style="color:var(--gold);">₹14 / Km</strong></td>
-            <td>250 / 300 Km / Day</td>
-            <td>₹300/-</td>
-          </tr>
-          <tr>
-            <td>Innova Crysta</td>
-            <td><strong style="color:var(--gold);">₹18 / Km</strong></td>
-            <td>300 Km / Day</td>
-            <td>₹300/-</td>
-          </tr>
-          <tr>
-            <td>Force Urbania (9 to 16 Seater)</td>
-            <td><strong style="color:var(--gold);">₹25 - ₹35 / Km</strong></td>
-            <td>300 Km / Day</td>
-            <td>₹500/-</td>
-          </tr>
-          <tr>
-            <td>Buses (22 - 45+ Seater)</td>
-            <td><strong style="color:var(--gold);">₹45 - ₹75 / Km</strong></td>
-            <td>300 Km / Day</td>
-            <td>₹700/-</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="section-wrap" id="faq">
-    <div class="section-header">
-      <div>
-        <h2>Frequently Asked Questions</h2>
-        <p>Everything you need to know before booking your tour</p>
-      </div>
-    </div>
-
-    <div class="faq-container">
-      <div class="faq-item">
-        <h4>Can I customize the 3N/4D, 5N/6D or 9N/10D tour packages?</h4>
-        <p>Yes, 100%! All our multi-day packages are completely customizable. You can adjust the destinations, add safari days, change vehicle types, or choose your own hotels based on your preferred pace and budget.</p>
-      </div>
-      <div class="faq-item">
-        <h4>Can I book hotels through you or choose my own?</h4>
-        <p>You have full flexibility! You can either book hotels according to your own budget and choice, or let us provide them. If you book through us, we guarantee the best wholesale rates across budget, luxury, or heritage properties in every city.</p>
-      </div>
-      <div class="faq-item">
-        <h4>How do I claim the Free Guide & Best Shopping Rate guarantee?</h4>
-        <p>Simply mention it via WhatsApp when confirming your multi-city package. We will arrange a complimentary 1-day tour guide and take you to authentic markets with guaranteed lowest wholesale rates.</p>
-      </div>
-      <div class="faq-item">
-        <h4>Are toll taxes and parking charges included in the package?</h4>
-        <p>For local 8-hour packages, local fuel and driver allowance are covered. For outstation trips, tolls, state road permits, and parking are payable as per actual receipts.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-wrap" id="reviews">
-    <div class="section-header">
-      <div>
-        <h2>Traveler Reviews & Ratings</h2>
-        <p>Trusted by over 10,000+ global travelers</p>
-      </div>
-    </div>
-
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-        <p>"We took the 5N/6D Rajasthan package. Our driver was punctual and courteous, and the free guide in Jaipur showed us hidden architectural gems. Truly exceptional service!"</p>
-        <div class="testimonial-author">- David Miller (London, UK)</div>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-        <p>"Transparent pricing tables and instant WhatsApp confirmation made our family trip in an Innova Crysta completely stress-free. Shopping guarantee saved us huge money!"</p>
-        <div class="testimonial-author">- Sneha & Family (Bangalore)</div>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-        <p>"Booked the 9 Nights tour across Rajasthan. The desert safari in Jaisalmer and the heritage stays booked through them were worth every penny. Highly recommended."</p>
-        <div class="testimonial-author">- Lucas Moreau (Paris, France)</div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2026 <strong>Explore India</strong>. All Rights Reserved. Designed for World Explorers & International Tourists.</p>
-  </footer>
-
   <script>
     function toggleAIChat() {
-      const chatBox = document.getElementById('aiChatBox');
-      chatBox.style.display = chatBox.style.display === 'flex' ? 'none' : 'flex';
+      const box = document.getElementById('aiChatBox');
+      box.style.display = box.style.display === 'block' ? 'none' : 'block';
     }
 
     function handleKeyPress(e) {
-      if (e.key === 'Enter') {
-        handleUserMessage();
-      }
+      if (e.key === 'Enter') handleUserMessage();
     }
 
     function sendQuickQuery(topic) {
       const input = document.getElementById('userInput');
-      if (topic === 'Packages') {
-        input.value = "What multi-day tour packages do you offer?";
-      } else if (topic === 'Free Guide') {
-        input.value = "Tell me about the Free 1-Day Tour Guide offer.";
-      } else if (topic === 'Hotels') {
-        input.value = "Can I book hotels through you or choose my own?";
-      } else if (topic === 'Cabs') {
-        input.value = "What are your cab rental rates?";
-      }
+      if (topic === 'Packages') input.value = 'What tour packages do you offer?';
+      else if (topic === 'Free Guide') input.value = 'Tell me about the free 1-day guide offer.';
+      else if (topic === 'Hotels') input.value = 'Can I book hotels through you or choose my own?';
+      else if (topic === 'Cabs') input.value = 'What are your cab rental rates?';
       handleUserMessage();
     }
 
@@ -1355,35 +1358,33 @@
       if (!text) return;
 
       const chatBody = document.getElementById('chatBody');
-      
       const userDiv = document.createElement('div');
       userDiv.className = 'ai-msg user';
       userDiv.innerText = text;
       chatBody.appendChild(userDiv);
-
       input.value = '';
       chatBody.scrollTop = chatBody.scrollHeight;
 
       setTimeout(() => {
         const botDiv = document.createElement('div');
         botDiv.className = 'ai-msg bot';
-        
         const lower = text.toLowerCase();
-        if (lower.includes('package') || lower.includes('पैकेज') || lower.includes('day') || lower.includes('night')) {
-          botDiv.innerText = "We offer 3 popular packages: 3N/4D Golden Triangle, 5N/6D Royal Rajasthan (Jaipur, Pushkar, Jodhpur, Udaipur), and 9N/10D Grand Desert Safari. All packages are 100% customizable!";
-        } else if (lower.includes('guide') || lower.includes('गाइड')) {
-          botDiv.innerText = "Yes! We provide a Complimentary 1-Day Tour Guide in any city of your choice when you book a multi-city package with us.";
-        } else if (lower.includes('hotel') || lower.includes('होटल')) {
-          botDiv.innerText = "You can choose hotels yourself based on your budget, or let us provide them! We guarantee wholesale discounted rates on Budget, Heritage, and Luxury properties.";
+
+        if (lower.includes('package') || lower.includes('day') || lower.includes('travel')) {
+          botDiv.innerText = 'We offer 3N/4D Golden Triangle, 5N/6D Royal Rajasthan, and 9N/10D Grand Imperial Desert packages. All are customizable!';
+        } else if (lower.includes('guide')) {
+          botDiv.innerText = 'Yes! We provide a complimentary 1-day tour guide when you book a multi-city package with us.';
+        } else if (lower.includes('hotel')) {
+          botDiv.innerText = 'You can book with us or choose your own hotel. If booked through us, we guarantee the best wholesale rates.';
         } else if (lower.includes('cab') || lower.includes('taxi') || lower.includes('rate') || lower.includes('tariff')) {
-          botDiv.innerText = "Our cab rates start from ₹12/Km for sedans, ₹14/Km for Ertiga, and ₹18/Km for Innova Crysta. Local 8-hr packages start at ₹2,200. Check our tariff table on the page!";
+          botDiv.innerText = 'Cab rates start from ₹12/km for sedans, ₹14/km for Ertiga, and ₹18/km for Innova. Local 8-hour packages start from ₹2,200.';
         } else {
-          botDiv.innerText = "That sounds exciting! For immediate assistance and customized itinerary planning, click the WhatsApp button on the bottom right to connect with our team directly.";
+          botDiv.innerText = 'That sounds exciting! For custom trip planning, message us on WhatsApp and our team will help you design the perfect itinerary.';
         }
 
         chatBody.appendChild(botDiv);
         chatBody.scrollTop = chatBody.scrollHeight;
-      }, 600);
+      }, 500);
     }
   </script>
 
@@ -1403,6 +1404,5 @@
     }
   </script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 </body>
 </html>
